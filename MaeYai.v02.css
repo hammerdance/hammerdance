@@ -1,0 +1,524 @@
+
+
+ /* MY CODE */
+* {
+
+	text-decoration: none;
+}
+
+main {
+	padding-top: 100px; /*samma som header */ 
+
+}
+
+ body {
+ /*	background-color: #f3f3f3;*/
+ /*	font-family: 'Poppins', sans-serif;*/
+ /*	font-family: 'Nerko One', cursive;*/
+ }
+
+ header {
+ 	position: fixed;	/* Huvudmeny stannar när man scrollar ner */
+ 	top: 0;
+ 	right: 0;
+ 	left: 0;
+ 	background-color: #fff;
+ 	width: 100%;
+ 	height: 100px;
+ }
+
+ header .header-brand {
+ 	font-family: Nerko One;
+ 	font-size: 24px;
+ 	font-weight: 900;
+ 	color: #111;
+ 	text-transform: uppercase;
+ 	display: block;
+ 	margin: 0 auto;
+ 	text-align: center;
+ 	padding: 20px 0;
+ }
+/* hela nav*/
+header nav ul li {
+	display: block;
+	margin: 0 auto;
+	width: fit-content;
+}
+header nav ul li {
+	display: inline-block;
+	float: left;
+	list-style: none;
+	padding: 0 16px;
+}
+header nav ul li a{ /* MENY NYHETER KONTAKT */
+	font-family: Nerko One;
+ 	font-size: 16px;
+ 	color: #111;
+ 	text-transform: uppercase; /* stora bokstäver i nav */
+}
+
+header .header-cases {
+	display: none; /*tar bort 'cases' i naven*/
+}
+/* desktop 1000 px + */
+@media only screen and (min-width: 1000px) {
+	header .header-brand {
+ 	margin: 31px 0;
+ 	text-align: left;
+ 	line-height: 38px;
+ 	padding: 0 20px 0 40px;
+ 	border-right: 3px solid #111;
+ 	float: left;
+ }
+
+	 header nav ul li {
+		margin: 20px 0px 0px 20px;
+		float:left;
+	}
+	header nav ul li a{
+	 	line-height: 60px; /* 100% height in the logo, then subtract 60px wich is 40 wich need to be split up in top/ bottom (20nav) */		
+	}
+	header .header-cases {
+	display: block;
+	font-family: Nerko One;
+ 	font-size: 16px;
+ 	color: #111;
+ 	text-transform: uppercase; /* stora bokstäver i CASES */
+ 	line-height: 38px;
+ 	border: 1px solid #111;
+ 	float: right;
+ 	margin-right: 40px;
+ 	margin-top: 30px;
+ 	padding: 0 20px;
+	}
+}
+
+/*INDEX*/
+
+.index-banner {
+	width: 100%;
+	height: calc(100vh - 100px);
+/*	background-image: url('img/mae1.png');*/
+	background-image: url('img/ThailandKhaoPad.jpg');
+/*	background-image: url( 'img/Untitled_Artwork 2.png'); */
+	
+	background-attachment: fixed; /* parallax effekt*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; /*cover the entire banner no matter width/height*/
+	display: table;
+}
+
+.vertical-center {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.index-banner h2 {
+	font-family: Nerko One;
+	font-size: 60px;
+	font-weight: 900;
+	line-height: 70px;
+ 	color: #fff;
+ 	text-align: center;
+ 	text-shadow: 2px 2px 8px #111; /* x x 8px = blur the shadow */
+}
+
+
+.index-banner h1 {
+	font-family: Poppins;
+	font-size: 28px;
+	font-weight: 100;
+	font-style: italic;
+	line-height: 40px;
+ 	color: #fff;
+ 	text-align: center;
+ /*	text-shadow: 2px 2px 8px #111; /* x x 8px = blur the shadow */
+}
+
+.index-links div {
+	margin: 16px 16px 0;
+	width: calc(100% - 32px);
+	height: 100px;
+	background-color: #f2f2f2;
+
+}
+
+/*p {
+	color: #111;
+} */
+.index-links div h3 {
+	font-family: Nerko One;
+	font-size: 28px;
+	font-weight: 100;
+	line-height: 100px; /*centerar texten i boxen eftersom den är 100px*/
+ 	color: #111;
+ 	text-align: center;
+ 	text-transform: uppercase;
+}
+
+.index-boxlink-rectangle p {
+		margin: 3px;
+		font-family: Nerko One;
+		font-size: 18px;
+		font-weight: 300;
+		color: #111;
+ 		text-align: left;
+
+}
+.wrapper h2 {
+	font-family: Nerko One;
+	font-size: 24px;
+	margin-left: 20px;
+}
+.wrapper h4 {
+	font-family: Nerko One;
+	font-size: 18px;
+	color: #DE781F;
+}
+
+/*  index section ändra banner bilder till 500px för desktop */
+@media only screen and (min-width: 1000px) {
+	.wrapper {
+		width: 1000px;
+		margin: 0 auto;
+
+	}
+	.index-banner {
+		height: 450px;
+	}
+	.index-banner h1 {
+		display: block;
+		width: 560px;
+		margin: 0 auto;
+	}
+
+	.index-links {
+		overflow: hidden; /* annars blir inget space på bottom av "cell" */
+	}
+
+	.index-links div {
+		margin: 20px 10px 0; /* margin 20 för toppen på cell */
+		height: 230px;
+		background-color: #f2f2f2;
+		float:left;  /* ändrar så att boxar Square/Rectangle flytter efter varandra */
+	}
+	.index-boxlink-square {
+		width: calc(25% - 20px) !important ;  /* !important overides previous styling*/
+
+	}
+	.index-boxlink-rectangle {
+		width: calc(50% - 20px) !important; /**/
+	}
+	/*
+	.index-boxlink-rectangle p {
+		font-family: Nerko One;
+		font-size: 24px;
+		font-weight: 300;
+		color: #111;
+ 		text-align: center;
+
+	}*/
+	.index-links div h3 {
+	line-height: 230px; /*centerar texten i boxen eftersom den är 100px*/
+	}
+
+}
+
+.cases-links {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.cases-links h2 {
+
+	font-family: Nerko One;
+	font-size: 28px;
+	font-weight: 600;
+	color: #111;
+ 	text-transform: uppercase;
+}
+
+.cases-links .cases-link {
+
+	float:left;
+	width: 230px;
+	height: 230px;
+	margin: 20px 10px 0px;
+	background-color: #e3e3e3;
+
+}
+
+.cases-links .cases-link p {
+/*	background-image: url('img/icon-food-chili.png');*/
+/*	background-repeat: no-repeat;
+	background-position: bottom right;
+*/	
+	padding-top: 45%; /* text align menyerna   */
+	font-family: Nerko One;
+	font-size: 24px;
+	font-weight: 600;
+	color: #111;
+ 	text-align: center;
+ 	text-transform: uppercase;
+}	
+.cases-links {
+
+	/*	width: 100%;
+	height: calc(100vh - 100px);
+*/
+	
+/*	background-size: cover; /*cover the entire banner no matter width/height*/
+/*	display: table;*/
+	
+}
+/*
+.cases-link h3 {
+	font-family: Nerko One;
+	font-size: 14px;
+	text-align: right;
+}
+*/
+
+/* main-dish  */
+/*
+.main-dish {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.main-dish h2 {
+	font-family: Nerko One;
+	font-size: 28px;
+	font-weight: 600;
+	color: #111;
+ 	text-transform: uppercase;
+}
+
+.main-dish {
+	float:left;
+	width: 230px;
+	height: 230px;
+	margin: 20px 10px 0px;
+	background-color: #e3e3e3;
+}
+
+*/
+/* CASE */
+
+.case-vid h2{
+	font-family: Nerko One;
+	font-size: 24px;
+	font-weight: 600;
+	color: #111;
+ 	text-align: center;
+ 	text-transform: uppercase;	
+}
+.case-vid video {
+	display: block;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.case-vid article h3 {
+	font-family: Nerko One;
+	font-size: 24px;
+	font-weight: 600;
+	color: #111;
+ 	text-transform: uppercase;
+ 	padding-bottom: 20px;
+}
+.case-vid article div p {
+	font-family: Nerko One;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	color: #111;
+ 	text-transform: uppercase;
+ 	column-count: 3;
+ 	column-gap: 20px;
+}
+
+
+
+/* FOOTER */
+
+footer {
+	width: calc(100% - 80px);
+	padding: 40px 40px; /* always gona be flexible depending on the content instead of height */
+	margin-top: 20px;
+	background-color: #111;
+	overflow: hidden; /* När man har många element med float:right/left */
+}
+
+footer ul {
+
+	width: fit-content;
+	float: left;
+	padding-left: 20px;
+}
+
+footer ul li {
+	display: block;
+	list-style: none;
+}
+
+footer ul li a {
+	font-family: Nerko One;
+ 	font-size: 16px;
+ 	color: #ccc;
+ 	line-height: 40px;
+}
+
+
+
+.footer-links-cases { /* .footer-links-cases är en class i din html */
+	display: none;
+
+}
+.footer-links-cases p { /* .footer-links-cases är en class i din html */
+	color: #ccc;
+}
+
+.footer-sm {
+	width: 50px; /* för bilderna ikonerna*/
+	float:right;
+}
+
+.footer-sm img {
+	width: 100%; /* för bilderna ikonerna*/
+	margin-bottom: 10px;
+}
+@media only screen and (min-width: 1000px) {
+	.footer-links-cases { 
+		display: block;
+	}
+	
+	footer ul {
+		padding-right: 30px;
+	}
+
+	footer ul li p {
+		font-family: Nerko One;
+ 		font-size: 16px;
+ 		color: #fff;
+ 		line-height: 40px;
+ 		text-transform: uppercase;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
